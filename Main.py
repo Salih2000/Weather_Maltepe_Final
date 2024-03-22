@@ -8,7 +8,7 @@ from Insert_To_Mssql import write_to_mssql
 
 logging.basicConfig(level=logging.INFO)
 
-api_key = "Enter Your API Key Here"
+api_key = "Write your api key here"
 city_name = "Maltepe"
 
 def main():
