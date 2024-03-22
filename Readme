@@ -1,0 +1,39 @@
+# Weather Data Pipeline
+
+This project fetches weather data for a specific location, sends it to a Kafka topic, consumes it from the topic, and then writes it to a MSSQL database.
+
+## Files
+
+- `Main.py`: The main script that orchestrates the entire pipeline.
+- `Fetch_Weather_data.py`: Contains functions to fetch the location key and current weather data.
+- `Produce_To_Kafka.py`: Contains a function to send data to a Kafka topic.
+- `Consume_From_Kafka.py`: Contains a function to consume data from a Kafka topic.
+- `Insert_To_Mssql.py`: Contains a function to write data to a MSSQL database.
+
+## Usage
+
+1. Set your API key as an environment variable:
+
+    ```sh
+    export API_KEY=your_actual_api_key
+    ```
+
+    Replace `your_actual_api_key` with your actual API key.
+
+2. Run the main script:
+
+    ```sh
+    python Main.py
+    ```
+
+## Note
+
+This project is set up to fetch weather data for Maltepe. If you want to fetch data for a different location, change the `city_name` variable in `Main.py` and `Fetch_Weather_data.py`.
+
+## Dependencies
+
+This project requires the following Python packages:
+
+- `requests`
+- `kafka-python`
+- `pyodbc`
