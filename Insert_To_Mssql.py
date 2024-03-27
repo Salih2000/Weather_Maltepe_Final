@@ -3,7 +3,7 @@ import logging
 
 def write_to_mssql(data):
     try:
-        connection_string = 'DRIVER={SQL Server};SERVER=localhost,1433;DATABASE=kafkaconsume;UID=sa;PWD=yourStrong(!)Password'
+        connection_string = 'DRIVER={SQL Server};SERVER=localhost,1433;DATABASE=enter_your_databasename;UID=sa;PWD=nter_your_connection_password'
         connection = pyodbc.connect(connection_string)
         cursor = connection.cursor()
 
